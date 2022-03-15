@@ -1,5 +1,7 @@
 ## ETL example pipeline 
 
+####The architecture of this project is inspired by: https://github.com/cordon-thiago/airflow-spark 
+
 This project contains the following containers:
 
 * postgres: Postgres database for Airflow metadata and a Test table used as our storage for the task.
@@ -42,16 +44,9 @@ I ve edited airflow.cfg to use Local Executor to achieve parallelism running the
 
 ## Setup
 
-### Build airflow Docker
-
-Inside the / Go to (cd) `zattoo-hiring/docker/docker-airflow`
-
-    $ docker build --rm --force-rm -t docker-airflow-spark:1.10.7_3.1.2 .
-
-
 ### Start containers
 
-Navigate to `zattoo-hiring/docker` and:
+Navigate to `airflow-etl/docker` and:
 
     $ docker-compose up
 
@@ -115,4 +110,4 @@ b. Which user is the most active user.
 -----------------------
 
 
-####The architecture of this project is inspired by: https://github.com/cordon-thiago/airflow-spark 
+
