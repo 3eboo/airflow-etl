@@ -1,4 +1,4 @@
-## Zattoo Hiring Challenge 
+## ETL example pipeline 
 
 This project contains the following containers:
 
