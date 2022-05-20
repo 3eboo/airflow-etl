@@ -25,7 +25,7 @@ def aggregate_count_per_attributes(group_by_attribute: str, count_attribute: str
 
     df = df.groupBy(group_by_attribute).agg(count(count_attribute))
 
-    logging.info(f"Saving total {count_attribute} per {group_by_attribute}")
+    logging.info(f"Saving total number of {count_attribute} per {group_by_attribute}")
 
     (
         df.write.format("jdbc")

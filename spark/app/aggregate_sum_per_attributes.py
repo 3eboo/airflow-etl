@@ -29,7 +29,7 @@ def aggregate_sum_per_attributes(group_by_attribute: str, sum_attribute: str):
 
     (
         df.write.format("jdbc").option("url", POSTGRES_DB)
-            .option("dbtable", f"{group_by_attribute}_per_{sum_attribute}")
+            .option("dbtable", f"{sum_attribute}_per_{group_by_attribute}")
             .option("user", POSTGRES_USER)
             .option("password", POSTGRES_PWD)
             .mode("overwrite").save()

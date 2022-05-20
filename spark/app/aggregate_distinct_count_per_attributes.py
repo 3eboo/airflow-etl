@@ -26,7 +26,7 @@ def aggregate_distinct_count_per_attributes(group_by_attribute: str, distinct_co
     df = df.groupBy(group_by_attribute).agg(countDistinct(distinct_count_attribute))
 
     logging.info(df.show())
-    logging.info(f"Saving total distinct {distinct_count_attribute} per {group_by_attribute}")
+    logging.info(f"Saving total distinct number of {distinct_count_attribute} per {group_by_attribute}")
 
     (
         df.write.format("jdbc")
