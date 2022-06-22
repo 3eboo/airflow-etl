@@ -55,7 +55,7 @@ If you want to run in background:
 
     $ chmod +x init-user-db.sh 
 
-Otherwise the docker-compose might not successfully finish postgres being stuck in the volumes step (see `docker-compose.yml`) 
+Only if docker-compose does not successfully finish (postgres being stuck in the volumes step) (see `docker-compose.yml`) 
 
 ### Check if you can access
 
@@ -82,7 +82,7 @@ Jupyter Notebook: http://127.0.0.1:8888
   
         $ docker logs -f docker_jupyter-spark_1
 
-In the `notebooks/extract-transform-notebook.ipynb` you can find the functions used to solve the transformations required in the task.   
+In the `notebooks/extract-transform-notebook.ipynb` you can find the work for the transformations in the tasks of the dag.  
   
 ## Running the dag
 
@@ -95,14 +95,7 @@ In the `notebooks/extract-transform-notebook.ipynb` you can find the functions u
 3. Go to dags and run and trigger the `extract-transform-load` dag (click trigger button)
     ![](./doc/trigger_dag.png "trigger dag")
 
-## Task 3: Write an SQL query for the following :
-a. Which channel is most popular per region (Hint: use watch duration)
-
-    SELECT channel, sum(duration) total_duration FROM processed_users GROUP BY channel, regionid HAVING MAX(total_duration)
-
-b. Which user is the most active user.
-
-    SELECT user_id, SUM(duration) total_watch FROM processed_users GROUP BY user_id ORDER BY total_watch DESC LIMIT 1  
+ 
 
 -----------------------
 
