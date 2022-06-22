@@ -39,9 +39,6 @@ This project contains the following containers:
 ![](./doc/architecture.png "Architecture")
 
 
-I ve edited airflow.cfg to use Local Executor to achieve parallelism running the tasks/processes. 
-
-
 ## Setup
 
 ### Start containers
