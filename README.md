@@ -1,6 +1,5 @@
 ## ETL example pipeline 
 
-####The architecture of this project is inspired by: https://github.com/cordon-thiago/airflow-spark 
 
 This project contains the following containers:
 
