@@ -5,7 +5,7 @@ from airflow.contrib.operators.spark_submit_operator import SparkSubmitOperator
 
 SPARK_MASTER = "spark://spark:7077"
 POSTGRES_DRIVER_JAR = "/usr/local/spark/resources/jars/postgresql-9.4.1207.jar"
-CSV_FILE_PATH = "/usr/local/spark/resources/data/hiring_task.csv"
+CSV_FILE_PATH = "/usr/local/spark/resources/data/target_data.csv"
 
 ###############################################
 # DAG Definition
